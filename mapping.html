@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+	Interphase by TEMPLATED	templated.co @templatedco	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)-->
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Indoor maps howto</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script> <noscript>
+			<link rel="stylesheet" href="css/skel.css">
+			<link rel="stylesheet" href="css/style.css">
+			<link rel="stylesheet" href="css/style-xlarge.css">
+		</noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+  </head>
+  <body> <!-- Header -->
+    <header id="header">
+      <h1><a href="index.html">Osiris</a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="osiris.html">Architecture</a></li>
+          <li><a href="mapping.html">Mapping</a></li>
+          <li><a href="#Contact%20Us">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="container">
+        <header class="major">
+          <h2>Mapping</h2>
+          <p>How to map buildings for Osiris</p>
+        </header>
+        <a href="#" class="image fit"><img title="Mapping for Osiris" src="images/mapping-skyline.jpeg"
+            alt="Mapping for Osiris"></a> To see a complete description of the
+        mapping process, visit the wiki <a target="_blank" title="How to map a building"
+          href="https://github.com/osiris-indoor/sample-maps/wiki/How-to-map-a-building">page</a>.
+        <br>
+        <br>
+        This section introduces the generation of all the information concerning
+        a building indoor map. It is&nbsp; achieved in three steps. <br>
+        <ol>
+          <li>First, all spaces and access structures&nbsp; have to be
+            drawn.&nbsp; </li>
+          <li>Then, every room, stair, elevator, etc. has to be tagged in order
+            to provide its name and type. </li>
+          <li>Finally the resultant file is uploaded to the server and processed
+            to be stored in a MongoDB storage.</li>
+        </ol>
+        There are several requirements such as taking existing data from Open
+        Street Maps, the ability of manipulate easily GIS data, and the capacity
+        to export the results to an XML file or even a JSON format, that made
+        Java Open Street Map editor (JOSM) the best choice for indoor
+        mapping.&nbsp; At the moment of needing to export information to Osiris
+        (third step), the format used is GeoJSON due to it is more appropriate
+        for the treatment and storage in MongoDB.<br>
+        <br>
+        <h1>Joining JOSM and MongoDB</h1>
+        Osiris has&nbsp; a NoSQL engine (MongoDB), which stores points or areas
+        of interest, allowing to assign properties to those points or areas and
+        perform&nbsp; searches based on geometry or properties. On the other
+        hand, using JOSM, the data is saved in OSM format (a XML file format
+        that contains all the information needed&nbsp; by Open Street Map).<br>
+        <br>
+        In order to convert information between both formats, Osiris executes
+        several processes that transform everything to GeoJSON format.
+        Such&nbsp; transformation is applied to all the elements of the OSM
+        format: nodes, ways and relations transforming them to GeoJSON geometric
+        elements, which are points, linestrings and polygons. The XML parsing
+        process is necessary to keep in memory the format and then process and
+        transform it to GeoJSON before storing in the database. After that, a
+        geospatial index is generated in order to optimize queries. <br>
+        <br>
+        In addition to the map data, there is a second collection to keep points
+        of interest; this allows separate searches, as if they were different
+        layers, depending on the data&nbsp; that we want to get. To sum up, it
+        is used to save and look up points of interest (places) and geometries
+        outside a building.<br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <section class="4u 6u(medium) 12u$(small)">
+            <h3>About Osiris</h3>
+            <p>Osiris is being created by Bitmonlab, the R&amp;D department at
+              Zed Worldwide and includes a reduced version of our indoor
+              mapping&nbsp; and smart technologies.</p>
+            <ul class="alt">
+              <li><a href="#">Smart projects at Bitmonlab.</a></li>
+              <li><a href="#">Bitmonlab projects page.</a></li>
+              <li><a href="#">Zed Worldwide</a></li>
+            </ul>
+          </section>
+          <section class="4u 6u$(medium) 12u$(small)">
+            <h3>This is an Open Source Project</h3>
+            <p>Find the project at Github. Feel free to contribute.</p>
+            <ul class="alt">
+              <li><a href="#">Osiris main page at Github<br>
+                </a></li>
+              <li><a href="#">Osiris server and core repository<br>
+                </a></li>
+              <li><span style="text-decoration: underline;">Sample Android app</span></li>
+              <li><a href="#">Example maps<br>
+                </a></li>
+            </ul>
+          </section>
+          <section class="4u$ 12u$(medium) 12u$(small)">
+            <h3><a id="Contact Us" name="Contact Us"></a>Contact Us</h3>
+            <p>Osiris is an Open Source server for Indoor Maps. Zed provides
+              advanced services on top of Osiris such as indoor location, indoor
+              navigation and speech recognition. We provide the perfect set of
+              technologies for smart cities. Find more about our solutions&nbsp;
+              in the&nbsp; <a title="Smart Projects" href="http://smartprojects.zed.com/?page_id=70">smart
+                projects</a> web site and contact us through its <a title="Contact us"
+                href="http://smartprojects.zed.com">contact page</a>.</p>
+            <ul class="icons">
+              <li><a target="_blank" href="http://smartprojects.zed.com/?page_id=70"
+                  class="icon rounded fa-envelope"><span class="label"></span></a>
+                <br>
+              </li>
+              <li><a target="_blank" href="http://smartprojects.zed.com/" class="icon rounded fa-link"><span
+                    class="label"></span></a> <br>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <ul class="copyright">
+          <li>© Zed Worldwide. All rights reserved.</li>
+          <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+          <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
