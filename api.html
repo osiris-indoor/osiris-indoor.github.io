@@ -1,0 +1,1165 @@
+---
+layout: api-page
+title: API
+subtitle: Reference documentation
+weight: 5
+---
+
+<div id="content" dir="ltr">
+        <h2 class="western"><a name="_paths"></a>Paths</h2>
+        <h3 class="western"><a name="_store_a_feature"></a>Store a feature</h3>
+        <pre style="margin-bottom: 0.5cm">POST /osiris/geolocation/territory/feature</pre><h4>
+        <a name="_parameters"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">BodyParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">body</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a></p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a></p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Invalid input parameter (header)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritoryfeature</p>
+        </ul>
+        <h3 class="western"><a name="_delete_a_feature"></a>Delete a feature</h3>
+        <pre style="margin-bottom: 0.5cm">DELETE /osiris/geolocation/territory/feature/{idFeature}</pre><h4>
+        <a name="_parameters_2"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">PathParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">idFeature</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_2"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">204</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature was deleted</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">404</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature was not found</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Invalid input parameter (header)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes_2"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces_2"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags_2"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritoryfeature</p>
+        </ul>
+        <h3 class="western"><a name="_update_a_feature"></a>Update a feature</h3>
+        <pre style="margin-bottom: 0.5cm">PUT /osiris/geolocation/territory/feature/{idFeature}</pre><h4>
+        <a name="_parameters_3"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">PathParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">idFeature</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">BodyParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">body</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Updated feature</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a></p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_3"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">404</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature was not found</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a></p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Invalid input parameter (header)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes_3"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces_3"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags_3"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritoryfeature</p>
+        </ul>
+        <h3 class="western"><a name="_get_a_feature_by_id"></a>Get a feature
+        by id</h3>
+        <pre style="margin-bottom: 0.5cm">GET /osiris/geolocation/territory/feature/{idFeature}</pre><h4>
+        <a name="_parameters_4"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">PathParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">idFeature</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_4"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">404</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Feature was not found</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a></p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Invalid input parameter (header)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes_4"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces_4"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags_4"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritoryfeature</p>
+        </ul>
+        <h3 class="western"><a name="_get_map_file"></a>Get .map file</h3>
+        <pre style="margin-bottom: 0.5cm">GET /osiris/geolocation/territory/map/file</pre><h4>
+        <a name="_parameters_5"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_5"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">404</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">.map file was not found</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">java.io.InputStream</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Invalid input parameter (header)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_tags_5"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritorymapfile</p>
+        </ul>
+        <h3 class="western"><a name="_get_metadata_of_map"></a>Get metadata
+        of map</h3>
+        <pre style="margin-bottom: 0.5cm">GET /osiris/geolocation/territory/map/metadata</pre><h4>
+        <a name="_parameters_6"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_6"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#MetaDataDTO">[MetaDataDTO]</a></p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Metadata of map was not found</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes_5"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces_5"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags_6"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritorymapmetadata</p>
+        </ul>
+        <h3 class="western"><a name="_get_features_according_to_query"></a>Get
+        features according to query</h3>
+        <pre style="margin-bottom: 0.5cm">POST /osiris/geolocation/territory/search</pre><h4>
+        <a name="_parameters_7"></a>Parameters</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Type</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Name</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Required</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Default</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">HeaderParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">api_key</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Application identifier</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">BodyParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">body</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Query</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">true</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">QueryParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">layer</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Layer</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">false</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">enum (ALL, MAP, FEATURES)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">ALL</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">QueryParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">pageIndex</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Index of page</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">false</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">integer (int32)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">0</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">QueryParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">pageSize</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Size of page</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">false</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">integer (int32)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">20</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">QueryParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">orderField</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Order field</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">false</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">string</p>
+                                </td>
+                                <td style="border: none; padding: 0cm"></td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">QueryParameter</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">order</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Order</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">false</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">enum (ASC, DESC)</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">ASC</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_responses_7"></a>Responses</h4>
+        <table cellpadding="2" cellspacing="2">
+                <col width="0">
+                <col width="0">
+                <col width="0">
+                <thead>
+                        <tr>
+                                <th style="border: none; padding: 0cm">
+                                        <p>HTTP Code</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Description</p>
+                                </th>
+                                <th style="border: none; padding: 0cm">
+                                        <p>Schema</p>
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">200</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">success</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock"><a href="#FeatureDTO">[FeatureDTO]</a>
+                                        array</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">400</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">Query is not correct</p>
+                                </td>
+                                <td style="border: none; padding: 0cm">
+                                        <p class="tableblock">No Content</p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <h4><a name="_consumes_6"></a>Consumes</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_produces_6"></a>Produces</h4>
+        <ul>
+                <li/>
+<p>application/json</p>
+        </ul>
+        <h4><a name="_tags_7"></a>Tags</h4>
+        <ul>
+                <li/>
+<p>osirisgeolocationterritorysearch</p>
+        </ul>
+        
+        
+
+<div class="sect1">
+<h2 id="_definitions">Definitions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<a name="FeatureDTO"></a>
+<h3 id="_featuredto">FeatureDTO</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set of properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of feature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">propertiesRelations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parents properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geometryDTO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometry of feature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GeometryDTO</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<a name="MetaDataDTO"></a>
+<h3 id="_metadatadto">MetaDataDTO</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">oSMChecksum</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">routingChecksum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checksum of routing file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxLatitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum latitude of map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxLongitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum longitude of map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minLongitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum longitude of map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minLatitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum latitude of map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">appId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application identifier of map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>	
+        
+</div>
