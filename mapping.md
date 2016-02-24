@@ -3,6 +3,7 @@ layout: page
 title: Mapping
 image: mapping-skyline.jpeg
 subtitle: How to map buildings for Osiris
+weight: 3
 ---
 
 To see a complete description of the mapping process, visit the wiki [page](https://github.com/osiris-indoor/sample-maps/wiki/How-to-map-a-building).

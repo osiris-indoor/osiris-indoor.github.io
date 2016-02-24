@@ -4,7 +4,7 @@ title: OSIRIS The Open Source Indoor Rest Server
 description: > # this means to ignore newlines until "baseurl:"
   Osiris is a solution providing indoor mapping and APIs to access indoor GIS data. It is targeted to small / medium projects (smart buildings and campuses) and is provided as a software package ready to be installed and used.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://http://osiris-indoor.github.io/" # the base hostname & protocol for your site
+url: "http://osiris-indoor.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 #github_username:  jekyll
 

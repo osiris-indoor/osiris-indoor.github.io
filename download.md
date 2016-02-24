@@ -3,6 +3,7 @@ layout: download
 title: Download
 image: mapping-skyline.jpeg
 subtitle: Download Osiris
+weight: 4
 ---
 
 # Binaries 

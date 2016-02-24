@@ -3,6 +3,7 @@ layout: page
 title: Architecture
 image: pic08.jpg
 subtitle: Learn more technical details about Osiris
+weight: 2
 ---
 
 Cities are becoming more intelligent over the time, producing huge amount of data. Citizens living in Smart Cities must have applications that allow access to their services and data. Having them handy, maybe on our smartphones and in the near future accessible in our own wearable technology, is also a challenge.   Osiris is a system capable of serving indoor geolocated information from a NoSQL geospatial database and providing a Restful web interface which is perfect for creating smartphone applications.

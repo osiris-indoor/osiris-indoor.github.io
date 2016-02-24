@@ -1,10 +1,11 @@
 <header id="header">
-    <h1><a href="index.html">Osiris</a></h1>
+    <h1><a href="/index.html">Osiris</a></h1>
     <nav id="nav">
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         
-        {% for page in site.pages %}
+        {% assign pages = site.pages | sort:"weight"  %}
+        {% for page in pages %}
             {% if page.title %}
             <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
             {% endif %}
