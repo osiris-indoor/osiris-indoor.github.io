@@ -6,7 +6,8 @@ weight: 5
 ---
 
 <div id="content" dir="ltr">
-        <h2 class="western"><a name="_paths"></a>Paths</h2>
+        <h2 class="western"><a name="_paths"></a>Features</h2>
+        <p> The Features API to store points of interest and then retrieve their information. You can store, update or delete a feature using the appropriate method. Of course you can obtain its data using its identifier.</p>
         <h3 class="western"><a name="_store_a_feature"></a>Store a feature</h3>
         <pre style="margin-bottom: 0.5cm">POST /osiris/geolocation/territory/feature</pre><h4>
         <a name="_parameters"></a>Parameters</h4>
@@ -575,6 +576,8 @@ weight: 5
                 <li/>
 <p>osirisgeolocationterritoryfeature</p>
         </ul>
+        <h2 class="western"><a name="_paths"></a>File</h2>
+        <p> The File API  provides a method to obtain the map file you can use with Mapsforge component</p>
         <h3 class="western"><a name="_get_map_file"></a>Get .map file</h3>
         <pre style="margin-bottom: 0.5cm">GET /osiris/geolocation/territory/map/file</pre><h4>
         <a name="_parameters_5"></a>Parameters</h4>
@@ -687,6 +690,8 @@ weight: 5
                 <li/>
 <p>osirisgeolocationterritorymapfile</p>
         </ul>
+        <h2 class="western"><a name="_paths"></a>Metadata</h2>
+        <p> Used to get the meta data of the map which is useful to know if there is a newer version uploaded to the server.</p>
         <h3 class="western"><a name="_get_metadata_of_map"></a>Get metadata
         of map</h3>
         <pre style="margin-bottom: 0.5cm">GET /osiris/geolocation/territory/map/metadata</pre><h4>
@@ -798,9 +803,11 @@ weight: 5
         <ul>
                 <li/>
 <p>osirisgeolocationterritorymapmetadata</p>
-        </ul>
+        </ul> 
+        <h2 class="western"><a name="_paths"></a>Search</h2>
+        <p>  Using Search you can get the features (points of interest) or the geometries to draw the building parts in your application.p>
         <h3 class="western"><a name="_get_features_according_to_query"></a>Get
-        features according to query</h3>
+        data according to query</h3>
         <pre style="margin-bottom: 0.5cm">POST /osiris/geolocation/territory/search</pre><h4>
         <a name="_parameters_7"></a>Parameters</h4>
         <table cellpadding="2" cellspacing="2">
