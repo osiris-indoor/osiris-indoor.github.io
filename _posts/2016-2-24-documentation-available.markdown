@@ -28,4 +28,16 @@ FEATURES | POST | /osiris/geolocation/territory/feature
 FEATURES | PUT | /osiris/geolocation/territory/feature/{idFeature} 
 SEARCH |POST | /osiris/geolocation/territory/search 
 
+Now is time to try yourself, [download][sandbox-download] the sandbox and follow the [instructions][osiris-readme] to create a sample project.
+
+
+<center>
+<ul class="actions">
+    <li><a href=" https://github.com/osiris-indoor/osiris/releases" class="button icon fa-download">Download</a></li>
+</ul>
+</center>
+
+
 [api-docs]:   /api.html
+[sandbox-download]: https://github.com/osiris-indoor/osiris/releases
+[osiris-readme]: https://github.com/osiris-indoor/osiris#osiris
