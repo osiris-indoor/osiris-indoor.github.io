@@ -744,14 +744,14 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #42b972;
+			background-color: #296C9B;
 		}
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: #34935a;
+			background-color: #25608A;
 		}
 
 		input[type="submit"].icon,
@@ -856,6 +856,8 @@
 			cursor: default;
 			opacity: 0.25;
 		}
+		.button a:link, .button a:visited {color:#ffffff;}
+		.button a:link {text-decoration: none;}
 
 /* Header */
 
