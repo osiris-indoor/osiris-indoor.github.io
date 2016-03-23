@@ -10,7 +10,7 @@ url: "http://osiris-indoor.github.io" # the base hostname & protocol for your si
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 
 #minimagick image resize 
@@ -20,7 +20,6 @@ mini_magick:
         destination: images/thumbs
         resize: "300x300"
         crop: "160x160+0+0"
-#    medium:
-#        source: img/photos/original
-#        destination: img/photos/medium
-#        resize: "600x400" 
+
+gems:        
+    - jekyll-minimagick
