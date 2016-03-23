@@ -4,6 +4,7 @@ title:  "Osiris blog and documentation available"
 date:   2016-2-24 13:39:17
 image: SmartUTAD.png
 categories: documentation
+author: Guillermo Amat
 ---
 As you can see, we are starting a new blog to support this project. We will try to write some use cases and examples to clarify how we use and how anyone can use Osiris. 
 

@@ -8,14 +8,16 @@ weight: 1
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
+      <a href="#"><img class="image left" src="/images/thumbs/{{ post.image }}" alt=""></a>    
+      <div class="article-intro">
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <h6>{{ post.date }}</h6>
+        <div class="entry">
+            {{ post.excerpt }}
+        </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+        <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
 </div>
