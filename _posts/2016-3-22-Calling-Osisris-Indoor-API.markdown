@@ -147,7 +147,7 @@ Let's go into detail for one of the items of the returned array:
 }
 {% endhighlight %}
 
-The structure is quite readable and correspondonds to a corridor in the second level that can be drawn using the coordinates from the collectionPointDTO property. Moreover, in your applications you can use diferent border and fill colors depending on the indoor tag value.
+The structure is quite readable and corresponds to a corridor in the second level that can be drawn using the coordinates from the collectionPointDTO property. Moreover, in your applications you can use different border and fill colors depending on the indoor tag value.
 
 [api-docs]:   /api.html
 [mongo-reference]: https://docs.mongodb.org/manual/tutorial/query-documents/
