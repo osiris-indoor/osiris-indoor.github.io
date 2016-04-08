@@ -61,7 +61,7 @@ Analyzing the image, we can see the following:
 
 The URL of the service is shown below. It is the one corresponding to the search method and we are specifying that we want to look in the MAP layer and limiting the quantity of results to 1000. 
 {% highlight JavaScript %}  
-http://127.0.0.1:8020/osiris/geolocation/territory/search;pageSize=1000?layer=MAP  
+http://127.0.0.1:8020/osiris/geolocation/territory/search?layer=MAP&pageSize=1000  
 {% endhighlight %}
 
 We are making a POST call using "Aachen" as an application identifier and telling the server that the content type will be json.
