@@ -12,14 +12,3 @@ url: "http://osiris-indoor.github.io" # the base hostname & protocol for your si
 markdown: kramdown
 highlighter: rouge
 
-
-#minimagick image resize 
-mini_magick:
-    thumbnail:
-        source: images
-        destination: images/thumbs
-        resize: "300x300"
-        crop: "160x160+0+0"
-
-gems:        
-    - jekyll-minimagick
