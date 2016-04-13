@@ -8,7 +8,7 @@ layout: default
           <h2>{{ page.title }}</h2>
           <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
         </header>
-        <a href="#" class="image right"><img src="/images/{{ page.image }}" alt=""></a>     
+        <a href="#" class="image right"><img src="/images/{{ page.image }}" alt="{{ page.imagedesc }}" title="{{ page.title }}"></a>     
         
         {{ content }}
         
