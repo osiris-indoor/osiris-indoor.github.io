@@ -237,7 +237,7 @@ function createGeometry(space){
 
 ![Our Leaflet map showing a popup of a corridor in our Smart Building](/images/leaflet-popup.png "Leaflet popup"){:class="image center"}
 
-And that's all. We have explained a basic usage of our indoor data for displaying maps. Now you can experiment changing styles, adding markers, making custom controls, including more objects from the indoor data such as doors, etc. You can get the full source of this article in the [Osiris's leaflet example repository][examples-repo].
+And that's all. We have explained a basic usage of our indoor data for displaying maps. Now you can experiment changing styles, adding markers, making custom controls, including more objects from the indoor data such as doors, etc. You can get the full source of this article in the [Osiris's leaflet example repository][examples-repo]{:target="_blank"}.
 
 
 
