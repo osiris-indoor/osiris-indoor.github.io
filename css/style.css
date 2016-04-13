@@ -450,7 +450,7 @@
 /* Image */
 
 	.image {
-		border-radius: 40px;
+		border-radius: 15px;
 		border: 0;
 		display: inline-block;
 		position: relative;
