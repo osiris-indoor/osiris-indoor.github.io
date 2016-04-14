@@ -1,0 +1,32 @@
+---
+layout: page
+title: Contact us
+description: "Contact Osiris team"
+image: contact.jpeg
+weight: 7
+---
+<h3>Contact form</h3>
+			
+<form action="https://formspree.io/osiris@bitmonlab.com" method="POST">   
+    <div class="row uniform 50%"> 
+        <input type="hidden" name="_next" value="{{ site.url}}/contact-thanks.html" />
+        <input type="text" name="_gotcha" style="display:none" />
+        
+        <div class="6u 12u$(xsmall)">
+                <input name="name" id="name" value="" placeholder="Name" type="text">
+        </div>
+        <div class="6u$ 12u$(xsmall)">
+                <input name="_replyto" id="email" value="" placeholder="Email" type="email">
+        </div>
+        
+        <div class="12u$">
+                <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+        </div>
+        <div class="12u$">
+            <ul class="actions">
+                <li><input value="Send Message" class="special" type="submit"></li>
+                <li><input value="Reset" type="reset"></li>
+            </ul>
+        </div>
+    </div>
+</form> 
