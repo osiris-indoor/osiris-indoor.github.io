@@ -11,9 +11,9 @@ author: Guillermo Amat
 
 In this article we will learn how to use [Leaflet][leaflet-home]{:target="_blank"} to show  the indoor maps of our smart building. We will take a common basemap and then we will overlay our indoor spaces getting the data stored previously in Osiris. We assume a basic knowledge of Leaflet however, the contents of this blog post are easy to understand. Another component we will need is JQuery, which will be used for makng AJAX requests to our Osiris server.
 
-Leaflet is a JavaScript library for interactive maps. It is used in many web sites and is mobile friendly. The API Reference is quite well documented and the project is Open Source having its code hosted at [GitHub][github-leaflet]{:target="_blank"}.
+Leaflet is a JavaScript library for interactive maps. Used in many web sites and mobile friendly, its API Reference is quite well documented and the project is Open Source having its code hosted at [GitHub][github-leaflet]{:target="_blank"}.
 
-The steps we are going to follow are these:
+The steps we are going to follow are:
 
 1- Upload a map to our server  
 2- Display a basemap using Leaflet  
@@ -23,9 +23,9 @@ The steps we are going to follow are these:
 
 ## Uploading the map
 
-Here we are going to use the same map and procedure we [described][map-uploading]{:target="_blank"} in the documentation. You are supposed to have Osiris installed and running correctly, if not follow this [instructions][build-instructions]{:target="_blank"}.
+Here the same map and procedure described in the documentation will be used. It is supposed the Osiris installation and running correctly. Otherwise, follow this [instructions][build-instructions]{:target="_blank"}.
 
-Get the example map from the [sample maps repository][sample-map]{:target="_blank"} and use the import command to upload it. Remember that the first parameter is your api_key ("Aachen" in this case) and it will be used in the API calls.
+Get the example map from the [sample maps repository][sample-map]{:target="_blank"} and use the import command to upload it. Remember that the first parameter is your api_key ("Aachen" in this case) and it will be used for the API calls.
 
 {% highlight sh %}
 sudo ./import_map.sh Aachen /path_to_my_map/map.osm
@@ -35,7 +35,7 @@ If everything is right you should be able to make API calls as [explained][calli
 
 ## Displaying a basemap in Leaflet
 
-Now we are starting to code the client application. Before adding a map, we need to explain some configuration variables:
+Now we are starting to code the client application. Before adding a map, some configuration variables must be explained:
 
 * api_key: as said before, is the identifier of our indoor map within Osiris
 * place: the geographical coordinates where our Leaflet map will be centered
@@ -52,7 +52,7 @@ Now we are starting to code the client application. Before adding a map, we need
 
 ![Comparing black and white OpenStreetMap vs Mapbox](/images/leaflet-compare.png "Black and white OpenStreetMap and Mapbox"){:class="image center"}
 
-In our application we will include a black and white version of OpenStreetMap just for making clear what is being drawn over the basemap. However, it is possible to choose many other options, you can have a look [to this Leaflet providers page][lf-providers]{:target="_blank"} and paste the code of your preferred map provider. As you can see, most of the listed maps allow a maximum zoom value of 18 or 19. This is a little problem because for indoor maps we need a higher zoom. To override this, Leaflet defines a property called "maxNativeZoom" which determines the maximum zoom of the tiles available from the map provider. In our example we have maxNativeZoom = 18 (limited by the provider) and maxZoom = 22 (maximum zoom in our application defined by us). When the current zoom value is higher than the maxNativeZoom, the tiles of the basemap are auto-scaled.
+In our application a black and white version of OpenStreetMap will be included, just for making clear what is being drawn over the basemap. However, it is possible to choose many other options. You can have a look [to this Leaflet providers page][lf-providers]{:target="_blank"} and paste the code of your preferred map provider. As you can see, most of the listed maps allow a maximum zoom value of 18 or 19. This is a little problem because for indoor maps we need a higher zoom. To override this, Leaflet defines a property called "maxNativeZoom" which determines the maximum zoom of the tiles available from the map provider. In our example we have maxNativeZoom = 18 (limited by the provider) and maxZoom = 22 (maximum zoom in our application defined by us). When the current zoom value is higher than the maxNativeZoom, the tiles of the basemap are auto-scaled.
 
 {% highlight js %}
     // Leaflet map creation
@@ -93,10 +93,10 @@ function queryMap(api_key, query, callbackFunc){
 
 Now we can use "queryMap" to retrieve our building's data. The third parameter is a callback method that will process the received response data. 
 
-In our example,we will draw our building in two steps:
+In our example, our building will be drawn in two steps:
 
 - First, we will obtain the level outlines as a base shape for all the other spaces in the same floor. 
-- Second, we will get the data of all the remaining spaces that are of our interest.
+- Second, the data of all the remaining spaces that are of our interest will be get.
 
 ### Obtaining the level outlines 
 
@@ -126,7 +126,7 @@ function createLevels(data){
 }
 {% endhighlight %}
 
-There is one more thing: we cannot be sure about the order of the results. This means that our code could generate the second level before the first and so on. To fix this issue we call a function called orderLevels that reorders our groups by their keys. As a result a new object is created ("levelGroups") which is an ordered copy of "levels" with a more friendly key that will be used in the LayerControl to display each floor name. The last two sentences in this function are used to add the default LayerGroup (the one to be shown after loading the page) to the Leaflet map object and to add the layers control at the top right of the map. 
+There is one more thing: we cannot be sure about the order of the results. This means that our code could generate the second level before the first and so on. To fix this issue a function called orderLevels that reorders our groups by their keys is available.  As a result a new object is created ("levelGroups") which is an ordered copy of "levels" with a more friendly key that will be used in the LayerControl to display each floor name. The last two sentences in this function are used to add the default LayerGroup (the one to be shown after loading the page) to the Leaflet map object and to add the layers control at the top right of the map. 
 
  
 {% highlight js %}
@@ -158,7 +158,7 @@ Our second query to Osiris will be this one:
 queryMap(api_key,"{ $and: [ {properties.indoor:{$exists: true}} , {properties.indoor: {$ne: 'level'}}] }",drawIndoor);
 {% endhighlight %}
 
-The query fetches all the items that contain the "indoor" tag but excluding those assigned with 'level' as value (the ones we already have). The callback function iterates through the results calling createGeometry which is the responsible of drawing all the polygons or polylines needed, including different colors depending on the space type. When the geometry is created, it is added to its LevelGroup.
+The query fetches all the items containing the "indoor" tag but excluding those assigned with 'level' as value (the ones we already have). The callback function iterates through the results calling createGeometry which is the responsible of drawing all the polygons or polylines needed, including different colors depending on the space type. When the geometry is created, it is added to its LevelGroup.
 
 
 {% highlight js %}
