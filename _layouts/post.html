@@ -7,10 +7,12 @@ layout: default
         <header class="major">
           <h2>{{ page.title }}</h2>
           <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+            {% include share-page-top.html %}
         </header>
         <a href="#" class="image right"><img src="/images/{{ page.image }}" alt="{{ page.imagedesc }}" title="{{ page.title }}"></a>     
         
         {{ content }}
+        {% include share-page-bottom.html %}
         
       </div>
     </section>

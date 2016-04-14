@@ -1123,3 +1123,18 @@
 					margin-left: 0;
 					padding-left: 0;
 				}
+/* Share buttons */				
+				
+        ul.share-buttons{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        }
+
+        ul.share-buttons li{
+        display: inline;
+        }
+
+        ul.share-buttons img{
+        width: 32px;
+        }
