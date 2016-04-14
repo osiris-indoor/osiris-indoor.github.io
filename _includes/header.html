@@ -6,7 +6,7 @@
         
         {% assign pages = site.pages | sort:"weight"  %}
         {% for page in pages %}
-            {% if page.title && page.weight%}
+            {% if page.title and page.weight%}
             <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
