@@ -5,7 +5,7 @@ description: "Taking data from BIM and GIS sources to improve the quality of our
 date:   2016-5-26 9:39:17
 image: 3dmodel.png
 imagedesc: "3D model of a building in a BIM viewer"
-categories: tutorial
+categories: article
 author: Guillermo Amat
 ---
 
