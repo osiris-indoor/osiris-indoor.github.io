@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Combining BIM and GIS in a Smart Application"
+title:  "Combining BIM and GIS in a Smart City Application"
 description: "Taking data from BIM and GIS sources to improve the quality of our Smart Application."
 date:   2016-5-26 9:39:17
 image: 3dmodel.png
