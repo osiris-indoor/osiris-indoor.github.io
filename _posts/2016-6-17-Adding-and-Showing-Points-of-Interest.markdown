@@ -25,13 +25,15 @@ Secondly, the properties field is a container of data. For our POIs we want to s
 Now we want to send this information to our Osiris instance. To do that we use the previous JSON string in a CURL petition to the territory/feature method:
 
 {% highlight sh %}
-curl -i -H "api_key: valenciaconference" -H "Content-Type: application/json" -X POST -d '{ "geometryDTO": {"type": "point", "latitude": 39.494143264768105, "longitude": -0.40192766277868941 }, "properties": {"name": "Bus stop", "type": "Transport", "subtype": "Bus", "description": "Bus stop. Lines 62, 63 and N3"}}' http://localhost:8020/osiris/geolocation/territory/feature
+curl -i -H "api_key: valenciaconference" -H "Content-Type: application/json"  -H "Authorization: Basic ZGVmYXVsdHVzZXI6bXlwYXNzd29yZA==" -X POST -d '{ "geometryDTO": {"type": "point", "latitude": 39.494143264768105, "longitude": -0.40192766277868941 }, "properties": {"name": "Bus stop", "type": "Transport", "subtype": "Bus", "description": "Bus stop. Lines 62, 63 and N3"}}' http://localhost:8020/osiris/geolocation/territory/feature
 {% endhighlight %}
+
+For these examples we are using the user "defaultuser" having "mypassword" as password. The base64 encoding of "defaultuser:mypassword" is "ZGVmYXVsdHVzZXI6bXlwYXNzd29yZA==". This authentication string has to be included as a header parameter (Authorization) on every call to Osisris' methods.
 
 In order to check we have inserted anything, we can do a generic search like this:
 
 {% highlight sh %}
-curl -i -H "api_key: valenciaconference" -H "Content-Type: application/json"  -X POST -d '{}'  http://localhost:8020/osiris/geolocation/territory/search?layer=FEATURES
+curl -i -H "api_key: valenciaconference" -H "Content-Type: application/json" -H "Authorization: Basic ZGVmYXVsdHVzZXI6bXlwYXNzd29yZA==" -X POST -d '{}'  http://localhost:8020/osiris/geolocation/territory/search?layer=FEATURES
 {% endhighlight %}
 
 And Osiris will return this JSON
@@ -50,11 +52,11 @@ Having the POI inserted in our database, we wan to show it on our map. We will m
 /**
  * Performs an AJAX call using JQuery
  **/
-function queryMap(api, layer, key, query, callbackFunc){
+function queryMap(api_key, authorization, layer, query, callbackFunc){
     $.ajax({
         url:"http://localhost:8020/osiris/geolocation/territory/search?layer="+layer+"&pageSize=1000",   // Osiris server URL
         type:"POST",
-        headers:  {"api_key" : api_key},     
+        headers:  {"api_key" : api_key, 'Authorization': 'Basic '+authorization },     
         data: query, 
         dataType: "json",
         contentType: 'application/json',              
@@ -71,7 +73,7 @@ Of course, the calls to that function in the index.html should include the new p
 
 {% highlight js %}
  // Let's add the POIs
- queryMap(api_key,"FEATURES","{}",drawPOIs);
+ queryMap(api_key,authorization,"FEATURES","{}",drawPOIs);
 {% endhighlight %}
 
 Finally, we need a function to draw the markers using the JSON data obtained from Osiris.
