@@ -65,7 +65,7 @@ Now, you have to create a collection in Mogo for the credentials. Note that we w
 mongo
 use osirisGeolocation
 db.createCollection("credentials_app_MyMapId", {} );
-db.credentials_app_MyMapId.insert({"_id" : "your_username", "password" : "zZpRQvC79xErr9l0yz8Wwg=="}
+db.credentials_app_MyMapId.insert({"_id" : "your_username", "password" : "zZpRQvC79xErr9l0yz8Wwg=="})
 db.commit
 {% endhighlight %}
 
