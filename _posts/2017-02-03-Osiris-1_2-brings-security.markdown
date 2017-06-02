@@ -107,4 +107,3 @@ curl -i -H "api_key: MyMapId" -H "Content-Type: application/json" -H "Authorizat
   
   If you imported a map (as explained in 1 ), you will see a JSON with information of your buildings.
 
-**Note: We are implementing security in all the services. As a consequence of this, the way to call the services is different and have to include the credential (see below). The example projects provided (Android and Leaflet source samples) in other repositories are temporally broken.**
